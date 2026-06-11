@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.brief {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+/* ── Masthead: newspaper double rule, mono dateline ────────────────────── */
+.masthead {
+  border-bottom: var(--rule-heavy);
+  padding-bottom: 0.75rem;
+}
+
+.masthead::after {
+  content: '';
+  display: block;
+  border-bottom: var(--rule-hairline);
+  margin-top: 3px;
+}
+
+.masthead-dateline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-block: 0.5rem;
+}
+
+.masthead h1 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+.masthead h1 .tripwire-mark {
+  color: inherit;
+}
+
+/* ── Layout: brief column + monitoring margin ──────────────────────────── */
+.brief-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-section);
+  margin-top: var(--space-section);
+}
+
+@media (min-width: 64rem) {
+  .brief-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  }
+}
+
+section h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 600;
+  border-bottom: var(--rule-hairline);
+  padding-bottom: 0.4rem;
+  margin-bottom: var(--space-block);
+}
+
+section + section {
+  margin-top: var(--space-section);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-soft);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Alerts: the only red on the page ──────────────────────────────────── */
+.alert {
+  border-top: var(--rule-hairline);
+  padding-block: var(--space-block);
+  max-width: var(--measure);
+}
+
+.alert:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.trigger-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-paper);
+  background: var(--color-signal);
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.alert h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-quote);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pinned-quote {
+  border-left: 2px solid var(--color-rule-strong);
+  padding-left: 1rem;
+  margin-block: 0.75rem;
+}
+
+.pinned-quote p {
+  font-family: var(--font-serif);
+  font-size: var(--text-quote);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.source-line {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  color: var(--color-ink-soft);
+  margin-top: 0.4rem;
+  word-break: break-all;
+}
+
+.angle {
+  font-size: var(--text-small);
+  color: var(--color-ink-soft);
+}
+
+.angle strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.verdicts {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.verdict {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  border: 1px solid var(--color-rule-strong);
+  padding: 0.2rem 0.6rem;
+  color: var(--color-ink);
+  background: transparent;
+}
+
+/* ── Gate queue ────────────────────────────────────────────────────────── */
+.gate-blocked {
+  background: var(--color-paper-inset);
+  border-left: 2px solid var(--color-rule-strong);
+  padding: var(--space-block);
+  max-width: var(--measure);
+}
+
+.gate-blocked .reason {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Dossier ───────────────────────────────────────────────────────────── */
+.dossier-version {
+  border-top: var(--rule-hairline);
+  padding-block: var(--space-block);
+  max-width: var(--measure);
+}
+
+.dossier-version pre {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.citation-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  border: 1px solid var(--color-rule);
+  padding: 0.1rem 0.45rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.5rem;
+}
+
+/* ── Monitoring margin: tables in mono, evidence everywhere ────────────── */
+.margin-note {
+  border-top: var(--rule-heavy);
+  padding-top: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-small);
+}
+
+caption {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-soft);
+  padding-bottom: 0.5rem;
+}
+
+th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  border-bottom: var(--rule-hairline);
+  padding: 0.3rem 0.5rem 0.3rem 0;
+}
+
+td {
+  border-bottom: var(--rule-hairline);
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  vertical-align: top;
+}
+
+td.mono,
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+}
+
+td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+}
+
+.brief-footer {
+  margin-top: var(--space-section);
+  border-top: var(--rule-heavy);
+  padding-block: 0.75rem 2rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  color: var(--color-ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

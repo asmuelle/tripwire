@@ -1,0 +1,29 @@
+/* Wire-brief editorial tokens (DESIGN.md visual direction).
+   Red is reserved for fired triggers — it appears nowhere else. */
+:root {
+  --color-paper: oklch(97% 0.01 90);
+  --color-ink: oklch(20% 0.01 60);
+  --color-ink-soft: oklch(38% 0.01 60);
+  --color-signal: oklch(55% 0.19 28);
+  --color-rule: oklch(78% 0.015 80);
+  --color-rule-strong: oklch(30% 0.01 60);
+  --color-paper-inset: oklch(94.5% 0.012 90);
+
+  --font-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  --text-base: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --text-small: 0.8125rem;
+  --text-mono: 0.75rem;
+  --text-h1: clamp(2rem, 1.2rem + 3.2vw, 3.4rem);
+  --text-h2: clamp(1.25rem, 1.05rem + 0.9vw, 1.7rem);
+  --text-quote: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+
+  --measure: 62ch;
+  --space-section: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+  --space-block: 1.25rem;
+
+  --rule-hairline: 1px solid var(--color-rule);
+  --rule-heavy: 3px solid var(--color-rule-strong);
+}
