@@ -2,19 +2,7 @@
 
 > Per-account buying-signal radar for SMB sales teams: a nightly agent maintains a living dossier on every named account inside the CRM and pings the rep only when a real trigger fires — with the pinned source quote and a suggested outreach angle.
 
-**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) · **Status:** 🟡 Tier 2 — strong economics, must outrun ChatGPT/Perplexity feature-shipping
-
-## Scorecard
-
-| Metric                          | Score    |
-| ------------------------------- | -------- |
-| Rank (of 12 finalists)          | #6       |
-| Combined score                  | 2.6      |
-| Monetization potential (1-10)   | 7        |
-| Feasibility (1-10)              | 6        |
-| Defensible vs platform features | No       |
-| Skeptic verdict                 | weakened |
-
+**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) 
 ## Concept
 
 Per-account buying-signal radar for SMB sales teams: a nightly agent maintains a living dossier on every named account inside the CRM and pings the rep only when a real trigger fires — with the pinned source quote and a suggested outreach angle.
