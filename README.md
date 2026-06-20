@@ -1,5 +1,7 @@
 # Tripwire
 
+[![CI](https://github.com/asmuelle/tripwire/actions/workflows/ci.yml/badge.svg)](https://github.com/asmuelle/tripwire/actions/workflows/ci.yml)
+
 > Per-account buying-signal radar for SMB sales teams: a nightly agent maintains a living dossier on every named account inside the CRM and pings the rep only when a real trigger fires — with the pinned source quote and a suggested outreach angle.
 
 **Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy)
