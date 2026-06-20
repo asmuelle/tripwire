@@ -2,12 +2,14 @@
 
 > Per-account buying-signal radar for SMB sales teams: a nightly agent maintains a living dossier on every named account inside the CRM and pings the rep only when a real trigger fires — with the pinned source quote and a suggested outreach angle.
 
-**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy) 
+**Category:** LLM wiki / auto-research (living documents + delta alerts, à la Karpathy)
+
 ## Concept
 
 Per-account buying-signal radar for SMB sales teams: a nightly agent maintains a living dossier on every named account inside the CRM and pings the rep only when a real trigger fires — with the pinned source quote and a suggested outreach angle.
 
 ## Target User
+
 Sales teams of 3-20 reps at B2B SMBs running named-account motions, plus founders doing founder-led sales. The sales leader pays: reps burn 1-3 hours of research per account, signal-based selling is an established motion with quantifiable ROI, and one extra meeting booked pays for a month.
 
 ## Auto-Research Mechanic (the living document + delta engine)
@@ -49,7 +51,7 @@ Clay (enrichment campaigns, not continuous account dossiers), UserGems (job-chan
 - Pocus — custom mid-five-figure annual pricing; acquired by Apollo Mar 2026
 - LinkedIn Sales Navigator — ~$99-180/seat/mo; shallow unsourced alerts; the inferior alternative many SMB reps already pay for
 
-## Adversarial Review 
+## Adversarial Review
 
 Tripwire's moat analysis is aimed at the wrong attacker. It correctly argues ChatGPT/Perplexity can't occupy the CRM account record — but the CRM landlords already do. HubSpot Breeze Intelligence ships Clearbit-powered enrichment + buyer-intent natively on the exact surface Tripwire claims, with zero-setup access to every interaction; Salesforce Agentforce has 18,500 customers. A HubSpot app whose entire value is 'better signals on the account record' is a Sherlock target, and HubSpot controls the API, the app store, and the pricing. Two founding claims are verifiably false: (a) 'no credible sub-$100/seat signal product exists' — Apollo Professional at $79/seat already bundles buying intent and job-change alerts WITH data and sequencing; (b) 'Clay is enrichment-centric, not a living-dossier monitor' — Clay shipped Custom Signals (funding, career movement, tech stack, account-level intent, social monitoring added early 2026) and is at $100M ARR with the distribution to move down-market faster than Tripwire can move up. DATA ACCESS kills the headline signals: the highest-value trigger ('CFO changed') lives on LinkedIn, which is legally and technically locked — that's precisely why UserGems charges enterprise prices; press releases catch a fraction of exec changes. SEC 8-K/10-K filings are free but irrelevant: SMB named accounts are overwhelmingly private companies. The $0.10-0.30/account/month COGS models only LLM tokens (which are indeed cheap in batch) and ignores the dominant costs: search API at ~$2.5-8/1k queries means 1-3 nightly queries/account is $0.08-0.70/account/mo alone; render-capable scraping behind Cloudflare pay-per-crawl adds $0.05-0.30; licensed people-data for exec tracking adds $0.10-0.50; tech-stack vendors (BuiltWith/HG) have four-figure monthly minimums. Realistic blended COGS at the promised breadth is $0.30-1.00/account/mo — so the $499 team plan (1,000 accounts = $0.50/account revenue) is at or below water, and the per-seat plan runs 0-70% gross margin, not SaaS margin. TRUST: the asymmetry is brutal — private SMB accounts emit sparse public signal, so most accounts are silent for months (product feels dead → churn) unless the threshold drops (noise → Slack channel muted by week 3). The fatal error is the silent miss: one tier-1 account that raised a round and got called by a competitor's rep before Tripwire pinged resets trust to zero, and exec-change recall without LinkedIn data cannot clear the bar the pitch sets. Pinned quotes fix hallucinated citations but not wrong-entity matches or misses. CHURN: the dossier does compound (this is not a 'caught up and cancel' product), but SMB sales tooling runs 3-5% monthly logo churn and this is the first line item cut in consolidation since Apollo/HubSpot/Clay each bundle adjacent signals; the converted-trigger feedback loop needs conversion volume a 5-rep SMB team generates too slowly to train a per-team model before churn risk peaks. The 'proprietary signal-to-revenue data' moat is real in principle but thin at SMB density, and Clay/Apollo observe orders of magnitude more conversion events. Net: survives the labs, gets squeezed by everyone adjacent.
 

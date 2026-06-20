@@ -9,12 +9,13 @@
   },
   "scripts": {
     "dev": "pnpm --filter @tripwire/web dev",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "e2e": "echo 'e2e: no Playwright suite yet — surfaces land with M2 (see DESIGN.md). Nothing to run.'",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "pnpm -r --if-present typecheck",
-    "build": "pnpm -r --if-present build",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r typecheck",
+    "build": "pnpm -r build",
     "migrate": "pnpm --filter @tripwire/db migrate"
   },
   "devDependencies": {

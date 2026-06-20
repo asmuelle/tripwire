@@ -50,6 +50,14 @@ lint: _bootstrapped
 format: _bootstrapped
     pnpm format
 
+# verify formatting (prettier --check); CI gate
+format-check: _bootstrapped
+    pnpm run format:check
+
+# audit dependencies for high+ severity advisories; CI gate
+audit: _bootstrapped
+    pnpm audit --audit-level=high
+
 # Type-check all packages (tsc --noEmit)
 typecheck: _bootstrapped
     pnpm typecheck
@@ -59,4 +67,4 @@ build: _bootstrapped
     pnpm build
 
 # Full merge gate: lint + typecheck + test + build (CI runs exactly this)
-ci: lint typecheck test build
+ci: lint format-check typecheck test build audit

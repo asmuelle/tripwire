@@ -31,7 +31,13 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['packages/core/src/**', 'packages/pipeline/src/**'],
-      reporter: ['text-summary', 'text'],
+      reporter: ['text', 'json-summary'],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        statements: 80,
+        branches: 80,
+      },
     },
   },
 });
