@@ -1,0 +1,40 @@
+# Tripwire
+
+> Tripwire is a per-account buying-signal radar for SMB sales teams. A nightly agent keeps a living dossier on every named account in your CRM and pings a rep only when a real buying signal trips — with the pinned source quote, the timestamp, and a suggested opening line. Tripwire is in pre-launch development.
+
+## What it is
+
+Tripwire keeps a living, versioned dossier on every named account in your CRM. A nightly agent re-reads each account, diffs public sources against yesterday, and scores every change against your ICP trigger profile. You hear from it only when a real trigger crosses the threshold you set — not on a schedule, and not on noise. Every alert carries its receipt: the trigger, the pinned source quote (string-matched against the live page before firing), the source URL, the timestamp, and a suggested opening line. The dossier lives on the CRM account record; the alert lands in Slack.
+
+## Who it's for
+
+- Individual reps and founders running founder-led sales
+- SMB sales teams of roughly 3–20 reps running named-account motions
+
+## Key features
+
+- Signal types scored against your ICP: funding rounds, exec changes, hiring that signals need, tech-stack shifts, and newsroom moves
+- Living, versioned dossier per account with cross-run memory — the delta and the memory are the product, not a snapshot
+- Alert payload: trigger, pinned quote, source + timestamp, why it matters, and a suggested opening line
+- Threshold control: you set where the wire sits per channel
+- Nightly batch with content-hash diffing to keep cost-per-account low enough to watch every named account
+- Two-way HubSpot & Salesforce sync; alerts in Slack
+- Relevance model that tunes from useful/converted feedback
+
+## Pricing
+
+Planned launch pricing for the SMB band; final numbers may move before general availability.
+
+- Seat — $99 / seat / mo. For individual reps and founders. 100 tracked accounts included; $0.75 / additional account / mo; living dossiers with pinned, verified quotes; Slack alerts with suggested opening lines.
+- Team — $499 / mo. For sales teams of 3–20 reps. 5 seats and 1,000 tracked accounts; two-way HubSpot & Salesforce sync; trigger-to-meeting analytics; per-team relevance model that learns from converted triggers.
+
+## FAQ highlights
+
+- False positives: alerts are matched to accounts by domain to avoid same-name confusion, and the pinned quote is string-matched against the live source before firing. Wrong-entity matches and misreads remain possible, so every ping ships with the source link and quote for two-second verification.
+- Coverage: monitors public, durable sources — company newsrooms and RSS, public job boards (Greenhouse, Lever, Ashby), SEC filings for public companies, and funding/news via search. Blind spots include LinkedIn (locked) and private-company SEC signals.
+- Nightly, not real-time: buying signals are measured in days; batch with content-hash diffing keeps cost low enough to watch every named account.
+- Not a static database: Tripwire watches what changes and maintains a versioned dossier across runs — a monitor, not a directory.
+
+## Link
+
+- Home: https://asmuelle.github.io/tripwire/

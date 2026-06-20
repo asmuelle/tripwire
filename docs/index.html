@@ -9,6 +9,8 @@
       content="Tripwire is a per-account buying-signal radar for SMB sales teams. A nightly agent keeps a living dossier on every named account in your CRM and pings you only when a real trigger trips — with the pinned source quote, the timestamp, and a suggested opening line."
     />
     <meta name="theme-color" content="#0B0D11" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+    <link rel="canonical" href="https://asmuelle.github.io/tripwire/" />
 
     <link
       rel="icon"
@@ -17,17 +19,26 @@
     />
 
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asmuelle.github.io/tripwire/" />
     <meta property="og:title" content="Tripwire — Buying-signal radar for SMB sales teams" />
     <meta
       property="og:description"
       content="A nightly agent watches every named account in your CRM and pings you only when a real trigger trips — with the pinned source quote, the timestamp, and a suggested opening line."
     />
     <meta property="og:site_name" content="Tripwire" />
-    <meta property="og:image" content="og.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://asmuelle.github.io/tripwire/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tripwire — a buying-signal radar that alerts SMB sales reps only when a real trigger trips on a named account." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="og.png" />
+    <meta name="twitter:title" content="Tripwire — Buying-signal radar for SMB sales teams" />
+    <meta
+      name="twitter:description"
+      content="A nightly agent watches every named account in your CRM and pings you only when a real trigger trips — with the pinned source quote, the timestamp, and a suggested opening line."
+    />
+    <meta name="twitter:image" content="https://asmuelle.github.io/tripwire/og.png" />
+    <meta name="twitter:image:alt" content="Tripwire — a buying-signal radar that alerts SMB sales reps only when a real trigger trips on a named account." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1040,6 +1051,116 @@
       async
       src="//gc.zgo.at/count.js"
     ></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://asmuelle.github.io/tripwire/#website",
+            "url": "https://asmuelle.github.io/tripwire/",
+            "name": "Tripwire",
+            "description": "A per-account buying-signal radar for SMB sales teams. A nightly agent keeps a living dossier on every named account in your CRM and pings you only when a real trigger trips.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://asmuelle.github.io/tripwire/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://asmuelle.github.io/tripwire/#organization",
+            "name": "Tripwire",
+            "url": "https://asmuelle.github.io/tripwire/",
+            "logo": "https://asmuelle.github.io/tripwire/og.png"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://asmuelle.github.io/tripwire/#software",
+            "name": "Tripwire",
+            "url": "https://asmuelle.github.io/tripwire/",
+            "description": "A per-account buying-signal radar for SMB sales teams. A nightly agent keeps a living dossier on every named account in your CRM and alerts a rep only when a real buying signal trips — with the pinned source quote, the timestamp, and a suggested opening line.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "publisher": { "@id": "https://asmuelle.github.io/tripwire/#organization" },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "99",
+              "highPrice": "499",
+              "offerCount": 2,
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Seat",
+                  "description": "For individual reps and founders running founder-led sales. 100 tracked accounts included.",
+                  "priceCurrency": "USD",
+                  "price": "99",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "99",
+                    "priceCurrency": "USD",
+                    "unitText": "seat",
+                    "billingDuration": 1,
+                    "billingIncrement": "MONTH"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Team",
+                  "description": "For sales teams of 3–20 reps running named-account motions. 5 seats and 1,000 tracked accounts.",
+                  "priceCurrency": "USD",
+                  "price": "499",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "499",
+                    "priceCurrency": "USD",
+                    "billingDuration": 1,
+                    "billingIncrement": "MONTH"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://asmuelle.github.io/tripwire/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What if it fires on the wrong company or a false signal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Two things keep false positives down: every alert is matched to an account by its domain as a primary key to avoid same-name confusion, and the pinned quote is string-matched against the live source before any alert fires — so you never get a hallucinated citation. It won't be perfect. Wrong-entity matches and the occasional misread are possible, which is exactly why each ping ships with the source link and quote: you can verify in two seconds, and your useful/not-useful feedback tunes the threshold over time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does Tripwire actually cover — and what's it blind to?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We monitor public, durable sources: company newsrooms and RSS, public job boards (Greenhouse, Lever, Ashby), SEC filings for public companies, and funding/news via search. We're honest about the gaps. LinkedIn is technically and legally locked, so exec-change recall from it is limited; SEC signals only apply to public companies, and most SMB accounts are private; some job boards aren't accessible at all. Tripwire is a high-signal radar over what's publicly observable — not an omniscient feed. Some accounts will be quiet for months because they genuinely emit little public signal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why nightly batch instead of real-time alerts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Buying signals are measured in days, not milliseconds — what matters is catching a trigger before a competitor's rep calls, and overnight clears that bar. Running in batch with content-hash diffing also keeps the cost per account low enough that you can watch every named account instead of rationing the radar to your top ten. The latency you'd gain from real-time isn't worth the cost it would force onto coverage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this another ZoomInfo-style static database?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Static databases tell you who a company is; they go stale the moment they're built. Tripwire watches for what changes and maintains a versioned dossier across runs, so the value is the delta and the memory — not a snapshot. It's a monitor, not a directory, and it lives on the account record you already work in rather than in a separate database you have to go check."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a href="#main" class="visually-hidden">Skip to content</a>
