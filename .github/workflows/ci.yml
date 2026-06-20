@@ -26,7 +26,7 @@ jobs:
       DATABASE_URL: postgres://tripwire:tripwire@localhost:5432/tripwire_test
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install just
         uses: extractions/setup-just@v3
